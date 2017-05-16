@@ -5,7 +5,7 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
-### 关于我
+## 关于我
 
 > IoT & Wearable 工程师   
 
@@ -14,6 +14,20 @@ icon: glyphicon-heart
 
 ---
 
+### 项目经历
+
+> Tizen1.0以前: 为Vodafone360手机开发PIMs应用和Launcher  
+
+![vodafone360](http://itliang.github.io/blog/public/img/vodafone.png)
+
+> Tizen1.0/2.3/2.4: 为Tizen Z1/Z3手机开发系统应用和服务及Tizen平台开发支持
+
+![tizenZ](http://itliang.github.io/blog/public/img/tizenz.png)
+
+> SmartHome: 为Tizen Gear开发SmartHome应用，Hub设备的系统开发
+
+![tizengear](http://itliang.github.io/blog/public/img/tizeng.png)
+ 
 ### 联系我
 
 * email：[liliangcose@163.com](mailto:{{ site.email }})
