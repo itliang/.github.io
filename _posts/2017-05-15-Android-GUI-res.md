@@ -10,14 +10,14 @@ excerpt: Android APP GUI开发实践笔记。
 {:toc}
 
 Android应用程序会使用各种资源，比如图片，字串，动画等，Android支持使用XML文件来定义这些资源及UI布局。  
-![resource布局](http://127.0.0.1:4000/public/img/resources.png)
+![resource布局](http://itliang.github.io/blog/public/img/resources.png)
 
 ---
 
 ### Android颜色渲染
 
 利用ProterBuff.Mode我们可以完成任意2D图像测操作。从下面的图中可以看出ProterBuff.Mode为枚举类，一共有16种枚举值：  
-![resource布局](http://127.0.0.1:4000/public/img/color.png)
+![resource布局](http://itliang.github.io/blog/public/img/color.png)
 
 1. PorterDuff.Mode.CLEAR：所绘制不会提交到画布上
 2. PorterDuff.Mode.SRC：显示上层绘制图片
