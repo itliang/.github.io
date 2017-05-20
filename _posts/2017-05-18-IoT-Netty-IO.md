@@ -49,7 +49,7 @@ JDK1.4版本提供了新的NIO类库，可以支持非阻塞I/O。在JDK1.7发�
 
 Client示例代码：
 		
-    	try{
+	try{
 		Socket socket = new Socket("127.0.0.1", port);
 		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
