@@ -49,13 +49,7 @@ JDK1.4版本提供了新的NIO类库，可以支持非阻塞I/O。在JDK1.7发�
 
 Client示例代码：
 		
-    import java.io.BufferedReader;
-	import java.io.IOException;
-	import java.io.InputStreamReader;
-	import java.io.PrintWriter;
-	import java.net.Socket;
-	
-	try{
+    	try{
 		Socket socket = new Socket("127.0.0.1", port);
 		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
@@ -69,11 +63,6 @@ Client示例代码：
 Server示例代码:  
 线程池的定义：
 	
-	import java.util.concurrent.ArrayBlockingQueue;
-	import java.util.concurrent.ExecutorService;
-	import java.util.concurrent.ThreadPoolExecutor;
-	import java.util.concurrent.TimeUnit;
-
 	public class ServerHandlerExecutePool {
 		public ExecutorService executor;
 		public ServerHandlerExecutePool(int maxPoolSize, int queueSize){
@@ -86,12 +75,6 @@ Server示例代码:
 	}
 	
 将请求Socket封装成一个Task：  
-
-	import java.io.BufferedReader;
-	import java.io.IOException;
-	import java.io.InputStreamReader;
-	import java.io.PrintWriter;
-	import java.net.Socket;
 
 	public class MyServerHandler implements Runnable{
 		private Socket socket;
