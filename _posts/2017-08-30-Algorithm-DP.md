@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "算法练习"
+title:  "Dynamic Program 算法练习"
 date:   2018-08-30 17:00:05
 categories: Algorithm
 excerpt: DP算法练习。
+
 ---
 
 * content
@@ -13,6 +14,8 @@ excerpt: DP算法练习。
 
 
 ##Dynamic Program基本概念及思想
+
+
 分解后的子问题不是相互独立的，下阶段的求解建立在上一个子阶段问题的解上。<br>
 最优子结构：问题的最优解所包含的子问题的解也是最优的。<br>
 重叠子问题：每次计算的子问题并不总是新问题，每个子问题只计算一次，将结果保存在一个表中。
@@ -73,5 +76,6 @@ LCS(X, Yn-1)表示在数组X中，m位之前的数据和在数组Y中n-1位之�
 				jj--;
 			}
 		}
+
 
 ###LCS最长公共子串
