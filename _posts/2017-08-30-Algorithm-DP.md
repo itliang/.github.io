@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Dynamic Program 算法练习"
-date:   2018-08-30 17:00:05
+date:   2017-08-30 17:00:05
 categories: Algorithm
 excerpt: DP算法练习。
-
 ---
 
 * content
