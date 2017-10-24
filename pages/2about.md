@@ -16,7 +16,7 @@ icon: glyphicon-heart
 
 ### 项目经历
 
-> Tizen1.0以前: 为Vodafone360手机开发PIMs应用和Launcher  
+> Tizen1.0前: 为Vodafone360手机开发PIMs应用和Launcher  
 
 ![vodafone360](http://itliang.github.io/blog/public/img/vodafone.png)
 
@@ -24,10 +24,14 @@ icon: glyphicon-heart
 
 ![tizenZ](http://itliang.github.io/blog/public/img/tizenz.png)
 
-> SmartHome: 为Tizen Gear开发SmartHome应用，Hub设备的系统开发
+> SmartHome: 为Tizen Gear开发SmartHome应用
 
 ![tizengear](http://itliang.github.io/blog/public/img/tizeng.png)
  
+> IoT: Hub系统和Samsung Connect生态系统的研究及开发
+
+![tizengear](http://itliang.github.io/blog/public/img/tizeng.png)
+
 ### 联系我
 
 * email：[liliangcose@163.com](mailto:{{ site.email }})
