@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Android异步消息处理机制"
-date:   2017-10-21 10:50:05
+title:  "Android的线程和线程池"
+date:   2017-10-26 19:50:05
 categories: Android
 excerpt: Android开发实践笔记。
 ---
@@ -9,17 +9,18 @@ excerpt: Android开发实践笔记。
 * content
 {:toc}
 
-Handler, Looper, Message都是与Android异步消息处理线程相关的概念。 异步消息处理线程启动后会进入一个无限的循环体之中，每循环一次，从其内部的消息队列中取出一个消息，然后回调相应的消息处理函数，执行完成一个消息后则继续循环。若消息队列为空，线程则会阻塞等待。
-（参照http://www.cnblogs.com/smyhvae/p/4003922.html 添加图）
+Android上的线程分为主线程和子线程，主线程主要处理和界面相关的事情，子线程往往用于执行耗时操作。除了Thread之外，Android可以扮演线程角色的还有AsyncTask, IntentService, HandlerThread。不同的形式的线程具有不同的特性和使用场景。
 
-Looper是每个线程中的MessageQueue管家，主要负责创建一个MessageQueue然后不断地从该MessageQueue中读取消息。
-
-Handler直接继承自Object,主要负责在子线程中发送Message/Runnable对象到MessageQueue中。在UI线程中接收，处理MessageQueue分发出来的Message/Runnable对象。主要作用是将一个任务切换到某个指定的线程中去执行。
+在操作系统中，线程是操作系统调度的最小单元，也不可能无限制地产生，其线程的创建和销毁都会有相应的开销。通过在线程池中缓存一定数量的线程就可以避免频繁创建和销毁线程带来的系统开销。
 
 ---
-### Looper
+### AyncTask
 
-MessageQueue只是一个消息的存储单元，它不能去处理消息，调用Looper的loop()方法后，就会进入到一个无限循环中不断地从MessageQueue读取消息，并调用Handler的handlerMessage()方法。每个线程中也只会有一个Looper对象。
+AsyncTask：允许在后台执行一个异步任务。可以将耗时的操作放在异步任务当中来执行，并随时将任务执行的结果返回给UI线程作更新。通过AsyncTask可以解决多线程之间的通信问题。
+
+AsyncTask封装了Thread和Handler，就相当于Android提供了一个多线程编程的一个框架。如果要定义一个AsyncTask，就需要定义一个类来继承AsyncTask这个抽象类，并实现其唯一的一个 doInBackgroud 抽象方法。
+
+	
 
 
 #### Looper源码分析
@@ -101,7 +102,7 @@ ThreadLocal不是线程，主要作用是在每个线程中互不干扰地存储
 msg.target.dispatchMessage(msg); 把msg交给msg的target的dispatchMessage方法去处理。其实就是Handler对象。	
 
 
-### Handler
+### HandlerThread
 
 Android UI是线程不安全的，如果在子线程中进行UI操作，程序就可能崩溃。通过创建一个Message对象，借助Handler发送出去，在Handler的handleMessage()方法中获得刚才发送的Message对象，然后再对UI进行操作。  
 
@@ -206,7 +207,7 @@ Runnable对象被放到了消息队列当中，然后主线程中的Looper(因�
 
 使用post的好处在于：避免了主线程和子线程中数据传输的麻烦。
 
-### Message
+### IntentService
 
 对于Message对象，不推荐使用构造方法得到，建议使用Message.obtain()这个静态方法或者Handler.obtainMessage()获取。Message.obtain()会从消息池中获取一个Message对象，如果消息池中是空的，才会使用构造方法实例化一个新Message，这样有利于消息资源的利用。并不需要担心消息池中的消息过多，它是有上限的，上限为10个。Handler.obtainMessage()具有多个重载方法，在内部也是调用Message.obtain()。
 
