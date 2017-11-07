@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Node.js 使用"
-date:   2017-10-12 14:00:05
+title:  "AWS Lambda-Java Script & Node.js 基础 "
+date:   2017-09-22 14:00:05
 categories: IoT
-excerpt: Node.js 使用。
+excerpt: AWS Lambda Dev Env，JavaScript & Node.js 基本知识。
 ---
 
 * content
@@ -14,8 +14,8 @@ excerpt: Node.js 使用。
 
 ## Prerequisite
 
-### Router
-Router是一个孤立的中间件和路由的实例。Router可以被认为是一个”mini”的应用程序，仅能执行中间件和路由选择。
+### Setup AWS Env
+
 #### 1.1	Install AWS CLI
 
 - 安装Python3
@@ -174,3 +174,29 @@ NPM是随同Node.js一起安装的包管理工具，主要用来给NPM服务器�
 - 查看安装信息：npm list -g
 - 查看某个模块的版本号：npm list express
 - 使用package.json:位于模块的目录下，用于定义包的属性。可通过npm init来创建。 我们可以在script里面配置一些常用的命令比如：start/stop/restart等
+
+		{
+		  	"name": "webhook",
+		  	"version": "1.0.0",
+		  	"description": "sample webhook app",
+		  	"main": "server.js",
+		  	"scripts": {
+		    	"test": "echo \"Error: no test specified\" && exit 1",
+		    	"start": "node server.js"
+		  	},
+		  	"author": "Liang",
+		  	"license": "ISC",
+		  	"dependencies": {
+		    	"bluebird": "^3.5.0",
+			    "body-parser": "^1.17.2",
+			    "config": "^1.26.2",
+			    "express": "^4.15.4",
+			    "fs": "0.0.1-security",
+			    "prettyjson": "^1.2.1",
+			    "http-signature": "^1.1.1",
+			    "request": "^2.81.0",
+			    "moment": "~2.18.1"
+		  	}
+		}
+
+至此，基本的Java Script语法和Node.js的基本概念已基本描述清楚，会单独一篇博文来总结Lambda App的开发。
