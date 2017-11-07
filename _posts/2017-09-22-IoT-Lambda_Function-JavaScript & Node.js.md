@@ -1,42 +1,16 @@
 ---
 layout: post
-title:  "AWS Lambda-Java Script & Node.js 基础 "
+title:  "Java Script & Node.js 基础 "
 date:   2017-09-22 14:00:05
 categories: IoT
-excerpt: AWS Lambda Dev Env，JavaScript & Node.js 基本知识。
+excerpt: JavaScript & Node.js 基本知识。
 ---
 
 * content
 {:toc}
 
 
----
-
-## Prerequisite
-
-### Setup AWS Env
-
-#### 1.1	Install AWS CLI
-
-- 安装Python3
-- 安装awscli(pip3 install awscli)
-- 添加AWS CLI到系统环境，编辑.bashrc, export PATH=~/.local/bin:$PATH	
-	 
-#### 1.2 Install Apex
-
-- Download apex_linux_amd64
-- cp apex_linux_amd64 /usr/local/bin/apex
-- chmod +x /usr/local/bin/apex
-
-#### 1.3 AWS credentials & Link Apex with AWS
-
-- Create AWS IAM user and copy AWS access key & AWS secret access key
-- In shell, run aws configure --profile <my-profile-name> 去添加IAM user到本机AWS configuration
-- Export: export AWS_PROFILE="<my-profile-name>" 
-- Export: export AWS_REGION="us-east-1"
-- Run apex init, 提示输入project 信息
-- Run apex deploy + functions目录下面的lambda app文件夹名完成Lambda部署
-
+为了实现C2C的集成，我们设计了Webhook和Lambda两种方案，Node.js轻量，简单，可伸缩性的特点是实现这两种方案PoC最佳选择。
 
 ### JavaScript基础
 

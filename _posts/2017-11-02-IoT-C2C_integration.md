@@ -10,14 +10,12 @@ excerpt: Cloud to Cloud integration solution。
 {:toc}
 
 
----
-
 # Introduction
 Cloud integration is the process of configuring multiple application programs to share data in the cloud. In a network that incorporates cloud integration, diverse applications communicate either directly or through third-party software.
 
 云集成是配置多个应用程序在云之间共享数据的过程。在整合云集成的网络中，不同的应用可以直接或者通过第三方软件相互沟通。
 
-## Mission & Goal
+### Mission & Goal
 
 通过一个客户端无缝地控制自己云和第三方平台上的设备。整合一个第三方的设备到我们的平台中，对最终用户来说，当这个设备出现在第三方平台的客户端以后，在我们的客户端里面经过成功的OAuth流程后，这个设备也应该出现在我们的客户端中。
 
