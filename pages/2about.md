@@ -9,7 +9,7 @@ icon: glyphicon-heart
 
 > IoT & Wearable 工程师   
 
-目前就职于Samsung，从事IoT & Wearable设备相关的研究和开发。   
+目前就职于Samsung，从事IoT Ecosystem相关的研究和开发。   
 
 
 ---
@@ -30,7 +30,7 @@ icon: glyphicon-heart
  
 > IoT: Hub系统和Samsung Connect生态系统的研究及开发
 
-![tizengear](http://itliang.github.io/blog/public/img/tizeng.png)
+![tizengear](http://itliang.github.io/blog/public/img/samsungconnect.png)
 
 ### 联系我
 
